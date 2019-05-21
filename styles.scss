@@ -1,0 +1,253 @@
+body {
+  margin: 50px;
+}
+
+.machine {
+  width: 150px;
+  height: 168px;
+  transform: scale(1.4);
+}
+
+/* TOP */
+
+.machine__top {
+  width: 142px;
+  height: 50px;
+  background: #51eaea;
+  border: 4px solid #560d0d;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+
+.machine__top--horizontalline {
+  width: 144px;
+  height: 2px;
+  background: #560d0d;
+  position: absolute;
+  top: 10px;
+}
+
+.machine__top--verticalline {
+  width: 2px;
+  height: 40px;
+  background: #560d0d;
+  position: absolute;
+  top: 11px;
+  left: 71px;
+}
+
+.machine__top--dot1 {
+  font-size: 30px;
+  padding: 2px;
+}
+
+.machine__top--dot2 {
+  font-size: 30px;
+  padding: 2px;
+  position: absolute;
+  bottom: -13px;
+}
+
+.machine__top--dot3 {
+  font-size: 30px;
+  padding: 2px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.machine__top--dot4 {
+  font-size: 30px;
+  padding: 2px;
+  position: absolute;
+  bottom: -13px;
+  right: 0px;
+}
+
+.machine__top--button1 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #560d0d;
+  background: yellow;
+  position: absolute;
+  top: 26px;
+  left: 16px;
+}
+
+.machine__top--button2 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #560d0d;
+  background: red;
+  position: absolute;
+  top: 26px;
+  left: 30px;
+}
+
+.machine__top--speed {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 19px;
+  right: 12px;
+}
+
+/* CENTER */
+
+.machine__center {
+  height: 110px;
+  background: #51eaea;
+  border-left: 4px solid #560d0d;
+  border-right: 4px solid #560d0d;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.machine__center--valve1 {
+  width: 35px;
+  height: 8px;
+  background: #8b5d5d;
+  border: 4px solid #560d0d;
+  position: absolute;
+  left: 40px;
+  top: -3px;
+}
+
+.machine__center--valve2 {
+  width: 40px;
+  height: 2px;
+  background: #8b5d5d;
+  border: 4px solid #560d0d;
+  position: absolute;
+  left: 44px;
+  top: 10px;
+}
+
+.machine__center--valve3 {
+  width: 20px;
+  height: 2px;
+  background: red;
+  border: 4px solid #560d0d;
+  border-radius: 0px 5px 5px 0px;
+  position: absolute;
+  left: 88px;
+  top: 10px;
+}
+
+.machine__center--valve4 {
+  width: 4px;
+  height: 4px;
+  background: #8b5d5d;
+  border: 4px solid #560d0d;
+  position: absolute;
+  left: 49px;
+  top: 17px;
+}
+
+.machine__center--valve5 {
+  width: 4px;
+  height: 4px;
+  background: #8b5d5d;
+  border: 4px solid #560d0d;
+  position: absolute;
+  left: 63px;
+  top: 17px;
+}
+
+.machine__center--glass {
+  width: 50px;
+  height: 37px;
+  background: white;
+  position: absolute;
+  bottom: 0px;
+  left: 36px;
+  border-radius: 2px 2px 20px 20px;
+  z-index: 2;
+}
+
+.machine__center--platzi {
+  width: 51px;
+  top: 7px;
+  left: -2px;
+  position: absolute;
+}
+
+.machine__center--earglass {
+  width: 10px;
+  height:8px;
+  position: absolute;
+  bottom: 12px;
+  right: 24px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+@mixin coffee() {
+  width: 4px;
+  height: 8px;
+  opacity: 0;
+  position: absolute;
+  background: #560d0d;
+  top: 28px;
+  animation: coffee 4s 4s linear infinite;
+}
+
+.machine__center--coffee1 {
+  @include coffee();
+  left: 53px;
+}
+
+.machine__center--coffee2 {
+  @include coffee();
+  left: 67px;
+}
+
+@keyframes coffee {
+  0% {
+    height: 0px;  
+    opacity: 1;
+  }
+  5% {
+    height: 0px;  
+    opacity: 1;
+  }
+  20% {
+    height: 62px;  
+    opacity: 1;
+  }
+  95% {
+    height: 62px;
+    opacity: 1;
+  }
+  100% {
+    height: 62px;
+    opacity: 0;
+  }
+}
+
+/* BOTTOM */
+
+.machine__bottom {
+  height: 12px;
+  background: #51eaea;
+  border-left: 4px solid #560d0d;
+  border-right: 4px solid #560d0d;
+  border: 4px solid #560d0d;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.machine__bottom--dot1 {
+  font-size: 30px;
+  padding-left: 6px;
+}
+
+.machine__bottom--dot2 {
+  font-size: 30px;
+  padding-right: 6px;
+}
